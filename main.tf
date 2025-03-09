@@ -21,6 +21,10 @@ provider "aws" {
   region = var.aws_region
 }
 
+terraform {
+  backend "local" { path = "terraform.tfstate" }
+}
+
 # Create the VPC and subnets using the VPC module
 module "vpc" {
   source = "./modules/vpc"
