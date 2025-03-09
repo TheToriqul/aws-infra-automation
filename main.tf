@@ -10,9 +10,6 @@ terraform {
     }
   }
 
-  # Using local state instead of S3
-  # The state will be stored in the terraform.tfstate file locally
-
   required_version = ">= 1.0.0"
 }
 
