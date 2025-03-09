@@ -10,14 +10,8 @@ terraform {
     }
   }
 
-  # Store the Terraform state in an S3 bucket
-  backend "s3" {
-    bucket         = "aws-infra-terraform-state"
-    key            = "terraform.tfstate"
-    region         = "ap-south-1"
-    encrypt        = true
-    dynamodb_table = "terraform-state-lock"
-  }
+  # Using local state instead of S3
+  # The state will be stored in the terraform.tfstate file locally
 
   required_version = ">= 1.0.0"
 }
