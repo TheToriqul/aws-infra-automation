@@ -25,12 +25,6 @@ variable "private_subnet_cidr" {
   default     = "10.0.2.0/24"
 }
 
-variable "availability_zone" {
-  description = "Availability zone for subnets"
-  type        = string
-  default     = "ap-southeast-1"
-}
-
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
